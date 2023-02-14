@@ -1,0 +1,3 @@
+https://www.justsajid.com/skills/datascience/understanding-machine-learning-methodology/
+https://www.mathworks.com/discovery/machine-learning.html
+https://www.mathworks.com/discovery/feature-engineering.html

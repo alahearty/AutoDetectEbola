@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>EBOLA APP DASHBOARD</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta name="viewport" content="width=device-width" />
+
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/paper-dashboard.css" rel="stylesheet" />
+	<link href="assets/css/themify-icons.css" rel="stylesheet" />
+	<style>
+		[type=radio] {
+			position: absolute;
+			opacity: 0;
+		}
+
+		[type=radio]+img {
+			cursor: pointer;
+			margin-right: 0.5rem;
+		}
+
+		[type=radio]:checked+img {
+			outline: 5px solid orange;
+		}
+
+		a {
+			color: white;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="sidebar" data-background-color="white" data-active-color="danger">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a class="simple-text">
+						<img src="assets/img/favicon.png" alt="" />
+					</a>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="dashboard.html">
+							<i class="ti-panel"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="active">
+						<a href="user.html">
+							<i class="ti-user"></i>
+							<p>User Profile</p>
+						</a>
+					</li>
+					<li>
+						<a href="table.html">
+							<i class="ti-view-list-alt"></i>
+							<p>Table List</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="maps.html">
+							<i class="ti-map"></i>
+							<p>Maps</p>
+						</a>
+					</li>
+					<!-- <li>
+					<a href="notifications.html">
+					<i class="ti-bell"></i>
+					<p>Notifications</p>
+					</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="main-panel">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar bar1"></span>
+							<span class="icon-bar bar2"></span>
+							<span class="icon-bar bar3"></span>
+						</button>
+						<a class="navbar-brand" href="#">User Profile</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="ti-panel"></i>
+									<p>Stats</p>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="ti-bell"></i>
+									<p class="notification">5</p>
+									<p>Notifications</p>
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Notification 1</a></li>
+									<li><a href="#">Notification 2</a></li>
+									<li><a href="#">Notification 3</a></li>
+									<li><a href="#">Notification 4</a></li>
+									<li><a href="#">Another notification</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ti-settings"></i>
+									<p>Settings</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-4 col-md-5">
+							<div class="card card-user">
+								<div class="image">
+									<img src="assets/img/background.jpg" alt="..." />
+								</div>
+								<div class="content">
+									<div class="author">
+										<img class="avatar border-white" src="assets/img/faces/face-1.jpg" alt="..." />
+										<h4 class="title" id="fullName">
+											John Doe<br />
+											<a href="#"><small id="username">@johndoe</small></a>
+										</h4>
+									</div>
+								</div>
+								<hr />
+								<div class="text-center">
+									<div class="row">
+										<div class="col-md-12">
+											<h5>Filovirus Status<br /><small>Unknown</small></h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-lg-8 col-md-7">
+
+							<div class="card">
+								<div class="header">
+									<h4 h4 class="title">Edit Profile</h4>
+								</div>
+								<div class="content">
+									<form>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>First Name</label>
+													<input id="firstName" type="text" class="form-control border-input"
+														placeholder="Company" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Last Name</label>
+													<input id="lastName" type="text" class="form-control border-input"
+														placeholder="Last Name" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Phone</label>
+													<input id="phone" type="text" class="form-control border-input"
+														placeholder="Phone" />
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Email
+														address
+													</label>
+													<input id="email" type="email" class="form-control border-input"
+														placeholder="Email" />
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Address</label>
+													<input id="address" type="text" class="form-control border-input"
+														placeholder="Home Address" />
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-8">
+												<div class="form-group">
+													<label>Location</label>
+													<input type="text" class="form-control border-input"
+														id="locationInput" />
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+
+													<button type="submit" class="btn btn-sm buttonclick"
+														style=" height: 38px; margin-top: 25px;">
+														Add Location
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>City</label>
+													<input id="city" type="text" class="form-control border-input"
+														placeholder="City" />
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Country</label>
+													<input id="country" type="text" class="form-control border-input"
+														placeholder="Country" />
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Postal Code</label>
+													<input id="postCode" type="number" class="form-control border-input"
+														placeholder="ZIP Code" />
+												</div>
+											</div>
+										</div>
+
+										<div class="text-center">
+											<button type="submit" class="btn btn-info btn-fill btn-wd btn-update">
+												Update
+												Profile
+											</button>
+										</div>
+										<div class="clearfix"> </div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-7">
+
+							<div class="card">
+								<div class="header">
+									<h4 h4 class="title">Baltimore Classification</h4>
+								</div>
+								<div class="content">
+									<form>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd" checked>
+															<img width="90%" height="90%"
+																src="assets/img/faces/marbug1.png" alt="..." />
+														</label>
+													</div>
+
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd">
+															<img width="90%" height="90%"
+																src="assets/img/faces/marbug2.png" alt="..." />
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd">
+															<img width="90%" height="90%"
+																src="assets/img/faces/ebola1.png" alt="..." />
+														</label>
+													</div>
+
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd">
+															<img width="90%" height="90%"
+																src="assets/img/faces/ebola2.png" alt="..." />
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd">
+															<img width="90%" height="90%"
+																src="assets/img/faces/ebola3.png" alt="..." />
+														</label>
+													</div>
+
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<div>
+														<label>
+															<input type="radio" name="virus" value="evd">
+															<img width="90%" height="90%"
+																src="assets/img/faces/marbug3.png" alt="..." />
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="clearfix"> </div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-7">
+							<div class="card">
+								<div class="header">
+									<h4 h4 class="title">Medical Record</h4>
+								</div>
+								<div class="content">
+									<form>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Body
+														Temperature
+													</label>
+													<input type="text" class="form-control border-input"
+														placeholder="Temperature" value="34" />
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Prolonged high
+														fever
+													</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Frequent
+														Headache
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Abdominal or
+														stomach pain
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Vomiting</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">Nausea</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Diarrhea</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Sore throat</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Lethargy</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">Chest pain</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Weakness </label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Dehydration</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Red eyes</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Lack of
+														Appetite
+													</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Difficulty in
+														breathing
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Internal or
+														external
+														bleeding
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Skin texture
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">High fever</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Severe
+														headache
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Severe
+														malaise
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Muscle aches and
+														pains
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Severe watery
+														diarrhea
+													</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Abdominal pain and
+														cramping
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Deep-set
+														eyes
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Expressionless
+														faces
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Extreme
+														lethargy
+													</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Non-itchy
+														rash
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Multiple bleeding
+														(nose, gums,
+														vagina)
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Confusion</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="exampleInputEmail1">
+														Irritability and
+														aggression
+													</label>
+													<select type="select" class="form-control border-input"
+														name="state">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Orchitis
+														(inflammation of
+														testicles
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>
+														Severe blood loss
+														and shock
+													</label>
+													<select type="select" class="form-control border-input"
+														name="Address">
+														<option value="">
+															Select
+														</option>
+														<option>
+															Yes
+														</option>
+														<option>
+															No
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="text-center">
+											<button type="submit" class="btn btn-info btn-fill btn-wd">Submit</button>
+										</div>
+										<div class="clearfix"> </div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul>
+							<li>
+								<a href="#"> Filovirus Smart Detect </a>
+							</li>
+							<li>
+								<a href="#"> About </a>
+							</li>
+							<li>
+								<a href="#"> Knowledge Base </a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright pull-right">
+						Copyright &copy;
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+	<script src="assets/js/chartist.min.js"></script>
+	<script src="assets/js/bootstrap-notify.js"></script>
+	<script src="assets/js/paper-dashboard.js"></script>
+	<script>
+		// User Data
+		const fullname = document.getElementById("fullName");
+		const username = document.getElementById("username");
+		const firstName = document.getElementById("firstName");
+		const lastName = document.getElementById("lastName");
+		const email = document.getElementById("email");
+		const phone = document.getElementById("phone");
+		const city = document.getElementById("city");
+		const address = document.getElementById("address");
+		const country = document.getElementById("country");
+		const postCode = document.getElementById("postCode");
+		const locationInput = document.getElementById('locationInput');
+		let latitudes;
+		let longitudes;
+
+		//Populate UserData
+		window.onload = async function () {
+			var res = await fetch("/api/profile");
+			if (res.redirected) location.href = "login.html";
+			if (res.ok) {
+				const data = await res.json();
+				firstName.value = data.firstName;
+				lastName.value = data.lastName;
+				email.value = data.email;
+				phone.value = data.phone;
+				city.value = data.city;
+				address.value = data.address;
+				country.value = data.country;
+				postCode.value = data.postCode;
+				locationInput.value = `Lat: ${data.latitude} | Long: ${data.longitude}`;
+				fullname.firstChild.nodeValue = `${data.firstName} ${data.lastName}`;
+				username.innerHTML = `@${data.firstName}${data.lastName}`.toLowerCase();
+			}
+		};
+
+		//Update User Data
+		document.querySelector(".buttonclick").addEventListener("click", function getLocation(evt) {
+			evt.preventDefault();
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function showPosition(position) {
+					latitudes = position.coords.latitude;
+					longitudes = position.coords.longitude;
+					console.log('Your current position is:');
+					console.log(`Latitude : ${latitudes}`);
+					console.log(`Longitude: ${longitudes}`);
+					console.log(`More or less ${position.coords.accuracy} meters.`);
+					locationInput.value = `Lat: ${latitudes} | Long: ${longitudes} | ${position.coords.accuracy} (meters)`;
+				});
+			} else {
+				locationInput.value = "Geolocation is not supported by this browser.";
+			}
+		});
+
+		const btn_update = document.querySelector(".btn-update");
+		btn_update.addEventListener('click', async (e) => {
+			e.preventDefault();
+
+			if (email.value.length === 0) return;
+			const data = {
+				firstName: firstName.value,
+				lastName: lastName.value,
+				email: email.value,
+				phone: phone.value,
+				city: city.value,
+				address: address.value,
+				country: country.value,
+				postCode: postCode.value,
+				latitude: latitudes,
+				longitude: longitudes,
+			};
+			var res = await fetch("/api/profile", {
+				method: "PUT",
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
+				},
+				body: JSON.stringify(data),
+			});
+			if (res.ok) {
+
+				$.notify(
+					{
+						icon: 'ti-gift',
+						message:
+							'Profile updated successfully!',
+					},
+					{
+						type: 'success',
+						timer: 4000,
+					}
+				);
+			}
+		});
+
+	</script>
+</body>
+
+</html>
